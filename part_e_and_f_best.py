@@ -4,7 +4,7 @@ path = "e_so_many_books.txt"
 with open(path, "r") as f:
     lines = [w.strip() for w in f.readlines()]
 num_books, num_libraries, num_days = [int(x) for x in lines[0].split()]
-books = [int(x) for x in lines[1].split()] # scores
+books = [int(x) for x in lines[1].split()]
 books2 = [int(x) for x in lines[1].split()]
 
 signups = []
@@ -18,15 +18,11 @@ for lib_info, x_info in zip(lines[2::2], lines[3::2]):
     ships.append(ship)
     books_avail_arr.append(books_avail)
 print(sum(books))
-# consolidated data
 
-# book scores
 books
-
-# for each library
-signups # duration to signup
-ships # ship time
-books_avail_arr # books_id
+signups
+ships
+books_avail_arr
 
 pass
 def library_scoring(idd, days_left=0):
